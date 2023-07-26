@@ -367,3 +367,8 @@
 2023 07 26	21:27:09	e528f09b-50a4-481e-9675-a7c0189227cd	POST	undefined	/login
 2023 07 26	21:27:27	3098cd66-efb4-4bc6-aaa1-ccb3219b309e	GET	undefined	/customers
 2023 07 26	21:27:45	d6a41bc4-9e15-40e9-beab-3d9dbd6eff2b	GET	undefined	/employees
+2023 07 27	00:33:59	ad5c2558-4c1a-4fd9-84dc-e4483702b31d	GET	undefined	/customers
+2023 07 27	00:34:04	88390a03-59a4-4afd-b4a2-b4212c0c7dfe	GET	undefined	/customers
+2023 07 27	00:34:22	85f4979d-5fe0-49b4-9600-7a569154dbac	GET	undefined	/customers
+2023 07 27	00:34:23	59cc0367-cb34-4f27-9e7f-072fa1a7fde5	GET	undefined	/customers
+2023 07 27	00:34:25	27769450-e496-4762-9858-c02fac6e48da	GET	undefined	/customers
