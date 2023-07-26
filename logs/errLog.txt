@@ -1,0 +1,21 @@
+2023 07 18	16:18:46	16e8e427-b3c4-4992-9ddf-e9b2c494b0ed	Error: Not allowed by CORS
+2023 07 18	16:59:39	58ddd8bf-8fcc-4c9b-a599-09abd9eae5f3	TypeError: req.json is not a function
+2023 07 18	17:00:44	dd974c7e-4b18-4976-895a-de04e6c02d82	TypeError: req.json is not a function
+2023 07 18	17:01:26	6e27236b-30ed-4feb-a5b4-4c4e17f3275f	TypeError: req.json is not a function
+2023 07 18	19:41:00	b071068d-a3ba-4e6a-aae2-3d930f602f20	TypeError: data.setEmployees is not a function
+2023 07 18	19:42:40	6f27452d-3658-4f3f-8bed-c88890c077ae	TypeError: data.setEmployees is not a function
+2023 07 23	20:26:47	fe886aa9-13e3-4f7a-974e-62217ff666cc	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 23	20:27:12	1750c523-03ee-4561-a30f-b03f02cb659f	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 23	20:27:13	40b1bf0a-fa6c-46cf-bf4a-b3f4d18dfd53	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	20:45:18	c66eca45-3c99-43ce-bd56-9fe7ca837577	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	20:45:27	9757d954-39bd-44c7-a6b8-40d92b15af22	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	20:45:46	f2990c60-cad5-4e97-bbc0-51a7be38a49f	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	20:46:42	96896892-5a88-46ff-b263-1d23ad27a2af	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	21:00:51	efb340ff-861c-4622-a457-0512f223dfd9	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	21:00:52	73c1de14-530b-40d0-a578-b4e6c21244f2	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	21:00:52	3f720409-cc40-4071-9bc9-93dfdfa66706	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	21:17:31	c5c99cb9-6220-426d-8821-6f865797809e	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	21:17:32	701b6b51-da03-47c4-b9c6-9607d58a5663	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	21:17:33	a3a242fe-a693-47eb-bd44-4073071fb40a	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	21:22:58	74d8ecb5-e766-421c-a91e-7767fe2b69a9	SyntaxError: Unexpected token e in JSON at position 0
+2023 07 26	21:22:59	d75d1af9-4374-418c-854b-0ebd3f55e8b7	SyntaxError: Unexpected token e in JSON at position 0
