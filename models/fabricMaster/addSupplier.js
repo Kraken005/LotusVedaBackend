@@ -24,7 +24,7 @@ const supplerSchema = new Schema({
     },
     address2: {
         type: String,
-        required: true
+        required: false
     },
     state: {
         type: String,
