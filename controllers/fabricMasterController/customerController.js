@@ -35,7 +35,7 @@ try {
         phoneNo: req.body.phoneNo,
         address2: req.body.address2,
         email: req.body.email,
-        gstNo: req.body.gst,
+        gstNo: req.body.gstNo,
         discount: req.body.discount,
         remarks: req.body.remarks,
         discountPercentage: req.body.discountPercentage,
