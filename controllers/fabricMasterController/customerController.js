@@ -22,6 +22,7 @@ const createNewCustomer = async (req, res) => {
     if(!req?.body?.prefix || !req?.body?.name || !req?.body?.address1 || !req?.body?.state || !req?.body?.city || !req?.body?.pincode || !req?.body?.phoneNo){
         res.status(400).json({'message' : "Enter the minimun details"});
     }
+    //console.log(req.body);
 
 try {
     const result = await Customer.create({
@@ -31,7 +32,15 @@ try {
         state: req.body.state,
         city: req.body.city,
         pincode: req.body.pincode,
-        phoneNo: req.body.phoneNo
+        phoneNo: req.body.phoneNo,
+        address2: req.body.address2,
+        email: req.body.email,
+        gstNo: req.body.gst,
+        discount: req.body.discount,
+        remarks: req.body.remarks,
+        discountPercentage: req.body.discountPercentage,
+        localType: req.body.localType,
+        contactPerson: req.body.contactPerson
     });
     res.status(201).json(result);
 } catch (error) {
