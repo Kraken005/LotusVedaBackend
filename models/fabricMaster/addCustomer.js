@@ -18,7 +18,6 @@ const customerSchema = new Schema({
     contactPerson: {
         type: String,
         required: false,
-        //default: " "
     },
     address1: {
         type: String,
@@ -27,7 +26,6 @@ const customerSchema = new Schema({
     address2: {
         type: String,
         required: false,
-        //default: " "
     },
     state: {
         type: String,
@@ -48,12 +46,10 @@ const customerSchema = new Schema({
     email: {
         type: String,
         required: false,
-        //default: " "
     },
     gstNo: {
         type: String,
         required: false,
-        //default: " "
     },
     discount: {
         type: String,
@@ -63,12 +59,10 @@ const customerSchema = new Schema({
     discountPercentage: {
         type: String,
         required: false,
-        //default: " "
     },
     remarks: {
         type: String,
         required: false,
-        //default: " "
     },
 },
 {

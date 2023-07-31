@@ -8,15 +8,15 @@ const companySchema = new Schema({
     },
     address: {
         type: String,
-        required: true
+        required: false
     },
-    phone: {
+    phoneNo: {
         type: String,
         required: true
     },
     gstin: {
         type: String,
-        required: true
+        required: false
     },
     tin: {
         type: String,
