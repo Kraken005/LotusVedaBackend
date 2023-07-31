@@ -54,7 +54,7 @@ const updateCompany = async (req, res) => {
 
 const deleteCompany = async (req, res) => {
     const { id} = req.body;
-    if(!id) res.status(400).json({"message": "Company ID is required. None found"});
+    if(!id) return res.status(400).json({"message": "Company ID is required. None found"});
 
     const company = await Company.findOne({_id: id}).exec();
     if(!company){
@@ -64,8 +64,19 @@ const deleteCompany = async (req, res) => {
     res.json(result);
 }
 
+const getCompany = async (req, res) => {
+    if(!req?.params?.id) return res.status(400).json({"message": "Company ID is required"});
+
+    const company = await Company.findOne({_id: req.params.id}).exec();
+    if(!company) return res.status(204).json({"message": `No company matches ID ${req.params.id}`});
+
+    res.json(company);
+}
+
 module.exports = {
     getAllCompany,
     createNewCompany,
-    updateCompany
+    updateCompany,
+    deleteCompany,
+    getCompany
 }
