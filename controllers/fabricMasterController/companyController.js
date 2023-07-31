@@ -34,7 +34,7 @@ const createNewCompany = async (req, res) => {
 
 const updateCompany = async (req, res) => {
     const {id, companyName, address, gstin, phoneNo, tin, state, city} = req.body;
-    if(id){
+    if(!id){
         res.status(400).json({"message": "ID parameter required"});
     }
 
