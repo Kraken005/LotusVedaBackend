@@ -3,15 +3,18 @@ const Company = require('../../models/fabricMaster/addCompany');
 
 const getAllCompany = async (req, res) => {
     try {
-        const company = await Company.find();
-        if(company.length === 0){
-            res.status(204).json({"message": "No company found"});
+        const companies = await Company.find();
+        if (companies.length === 0) {
+            res.status(204).json({ "message": "No companies found" });
+        } else {
+            res.json(companies);
         }
     } catch (error) {
         console.error(error);
-        res.status(500).json({"message": "Error finding company"});
+        res.status(500).json({ "message": "Error finding companies" });
     }
 }
+
 
 const createNewCompany = async (req, res) => {
     const {companyName, address, gstin, phoneNo, tin, state, city} = req.body;
