@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const supplerSchema = new Schema({
     prefix: {
         type: String,
-        required: false
+        required: true
     },
     localType: {
         type: String,
@@ -16,7 +16,7 @@ const supplerSchema = new Schema({
     },
     contactPerson : {
         type: String,
-        required: true
+        required: false
     },
     address1: {
         type: String,
@@ -38,25 +38,25 @@ const supplerSchema = new Schema({
         type: Number,
         required: true
     },
-    phoneNum: {
+    phoneNo: {
         type: String,
         required: true
     },
     email: {
         type: String,
-        required: true
+        required: false
     },
     gstNo: {
         type: String,
-        required: true
+        required: false
     },
     panNo: {
         type: String,
-        required: true
+        required: false
     },
     remarks: {
         type: String,
-        required: true
+        required: false
     },
     
 }, 

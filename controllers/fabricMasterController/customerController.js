@@ -60,13 +60,19 @@ const updateCustomer = async (req, res) => {
     }
     if (req.body?.prefix) customer.prefix = req.body.prefix;
     if (req.body?.name) customer.name = req.body.name;
-    if (req.body?.address1) {
-        customer.address1 = req.body.address1;
-    };
+    if (req.body?.address1) customer.address1 = req.body.address1;
     if(req.body?.state) customer.state = req.body.state;
     if(req.body?.city) customer.city = req.body.city;
     if(req.body?.pincode) customer.pincode = req.body.pincode;
     if(req.body?.phoneNo) customer.phoneNo = req.body.phoneNo;
+    if(req.body?.address2) customer.address2 = req.body.address2;
+    if(req.body?.email) customer.email = req.body.email;
+    if(req.body?.gstNo) customer.gstNo = req.body.gstNo;
+    if(req.body?.discount) customer.discount = req.body.discount;
+    if(req.body?.remarks) customer.remarks = req.body.remarks;
+    if(req.body?.discountPercentage) customer.discountPercentage = req.body.discountPercentage;
+    if(req.body?.localType) customer.localType = req.body.localType;
+    if(req.body?.contactPerson) customer.contactPerson = req.body.contactPerson;
     const result = await customer.save();
     res.json(result);
 

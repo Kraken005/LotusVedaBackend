@@ -1,4 +1,3 @@
-//const { id } = require('date-fns/locale');
 const Company = require('../../models/fabricMaster/addCompany');
 
 const getAllCompany = async (req, res) => {
