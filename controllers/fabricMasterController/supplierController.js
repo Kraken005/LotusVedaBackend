@@ -38,7 +38,7 @@ const updateSupplier = async (req, res) => {
     }
 
     const supplier = await Supplier.findOne({_id: id}).exec();
-    if(!company) res.status(204).json({"message": `No supplier matches ID ${id}`});
+    if(!supplier) res.status(204).json({"message": `No supplier matches ID ${id}`});
     
     if(prefix) supplier.prefix = prefix
     if(localType) supplier.localType = localType
