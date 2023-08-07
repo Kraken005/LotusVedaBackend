@@ -35,7 +35,7 @@ const supplerSchema = new Schema({
         required: true
     },
     pincode: {
-        type: Number,
+        type: String,
         required: true
     },
     phoneNo: {
