@@ -58,9 +58,9 @@ const updateCustomer = async (req, res) => {
     if (!customer) {
         return res.status(204).json({ "message": `No customer matches ID ${req.body.id}.` });
     }
-    if (req.body?.prefix) customer.prefix = req.body.prefix;
-    if (req.body?.name) customer.name = req.body.name;
-    if (req.body?.address1) customer.address1 = req.body.address1;
+    if(req.body?.prefix) customer.prefix = req.body.prefix;
+    if(req.body?.name) customer.name = req.body.name;
+    if(req.body?.address1) customer.address1 = req.body.address1;
     if(req.body?.state) customer.state = req.body.state;
     if(req.body?.city) customer.city = req.body.city;
     if(req.body?.pincode) customer.pincode = req.body.pincode;

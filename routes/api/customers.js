@@ -11,7 +11,8 @@ router.route('/')
     customerController.createNewCustomer)
     .put(//verifyRoles(rolesList.Admin, rolesList.Editor),
     customerController.updateCustomer)
-    .delete(verifyRoles(rolesList.Admin),customerController.deleteCustomer);
+    .delete(//verifyRoles(rolesList.Admin),
+    customerController.deleteCustomer);
 
 router.route('/:id')
     .get(customerController.getCustomer)
