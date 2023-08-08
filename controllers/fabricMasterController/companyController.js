@@ -17,7 +17,7 @@ const getAllCompany = async (req, res) => {
 
 const createNewCompany = async (req, res) => {
     const {companyName, address, gstin, phoneNo, tin, state, city} = req.body;
-    if(!companyName || !phoneNo || !address || !state || !city){
+    if(!companyName || /*!phoneNo || */!address || !state || !city){
         res.status(400).json({"message": "Enter minimum data"});
     }
 

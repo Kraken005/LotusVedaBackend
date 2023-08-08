@@ -12,7 +12,7 @@ const companySchema = new Schema({
     },
     phoneNo: {
         type: String,
-        required: true
+        required: false
     },
     gstin: {
         type: String,
