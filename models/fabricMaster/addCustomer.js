@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const customerSchema = new Schema({
     prefix: {
         type: String,
-        required: false
+        required: true
     },
     localType: {
         type: String,

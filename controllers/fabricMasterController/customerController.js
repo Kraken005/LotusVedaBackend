@@ -20,7 +20,7 @@ const getAllCustomer = async (req, res) => {
 
 const createNewCustomer = async (req, res) => {
     if(!req?.body?.prefix || !req?.body?.name || !req?.body?.address1 || !req?.body?.state || !req?.body?.city || !req?.body?.pincode || !req?.body?.phoneNo){
-        res.status(400).json({'message' : "Enter the minimun details"});
+        res.status(400).json({"message" : "Enter the minimun details"});
     }
     //console.log(req.body);
 
