@@ -8,7 +8,7 @@ const companySchema = new Schema({
     },
     address: {
         type: String,
-        required: false
+        required: true
     },
     phoneNo: {
         type: String,
@@ -20,7 +20,7 @@ const companySchema = new Schema({
     },
     tin: {
         type: String,
-        required: true
+        required: false
     },
     state: {
         type: String,
