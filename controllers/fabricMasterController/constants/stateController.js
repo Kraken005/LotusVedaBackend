@@ -29,7 +29,27 @@ const createNewState = async ( req, res) => {
     }
 }
 
+const updateState = async (req, res) => {
+    const {id, stateName, stateCode, shortName, stateType} = req.body;
+    if(!id){
+        res.status(400).json({"message": "ID parameter required"});
+    }
+
+    const state = await Company.findOne({_id: id}).exec();
+    if(!state) res.status(204).json({"message": `No company matches ID ${id}`});
+    if(companyName) state.companyName = companyName;
+    if(address) state.address = address
+    if(gstin) state.gstin = gstin
+    if(phoneNo) state.phoneNo = phoneNo
+    if(tin) state.tin = tin
+    if(state) state.state = state
+    if(city) state.city = city
+
+    const result = await state.save();
+    res.json(result);
+}
 module.exports = {
     getAllState,
-    createNewState
+    createNewState,
+    updateState
 }
