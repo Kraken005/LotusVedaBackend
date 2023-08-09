@@ -35,21 +35,41 @@ const updateState = async (req, res) => {
         res.status(400).json({"message": "ID parameter required"});
     }
 
-    const state = await Company.findOne({_id: id}).exec();
-    if(!state) res.status(204).json({"message": `No company matches ID ${id}`});
-    if(companyName) state.companyName = companyName;
-    if(address) state.address = address
-    if(gstin) state.gstin = gstin
-    if(phoneNo) state.phoneNo = phoneNo
-    if(tin) state.tin = tin
-    if(state) state.state = state
-    if(city) state.city = city
+    const state = await State.findOne({_id: id}).exec();
+    if(!state) res.status(204).json({"message": `No state matches ID ${id}`});
+    if(stateName) state.stateName = stateName
+    if(stateCode) state.stateCode = stateCode
+    if(shortName) state.shortName = shortName
+    if(stateType) state.stateType = stateType
 
     const result = await state.save();
     res.json(result);
 }
+
+const deleteState = async (req, res) => {
+    const {id} = req.body;
+    if(!id) return res.status(400).json({"message": "State ID is required. None found"});
+
+    const state = await State.findOne({_id: id}).exec();
+    if(!state){
+        res.status(204).json({"message": `No state matches ID ${id}`});
+    }
+    const result = await state.deleteOne({_id: id});
+    res.json(result);
+}
+
+const getState = async (req, res) => {
+    if(!req?.params?.id) return res.status(400).json({"message": "State ID is required"});
+
+    const state = await State.findOne({_id: req.params.id}).exec();
+    if(!state) return res.status(204).json({"message": `No state matches ID ${req.params.id}`});
+
+    res.json(state);
+}
 module.exports = {
     getAllState,
     createNewState,
-    updateState
+    updateState,
+    deleteState,
+    getState
 }

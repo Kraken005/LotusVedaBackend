@@ -44,7 +44,9 @@ app.use('/employees', require('./routes/api/employees'));
 app.use('/customers', require('./routes/api/customers'));
 app.use('/companies', require('./routes/api/company'));
 app.use('/suppliers', require('./routes/api/suppliers'));
+
 app.use('/constants/states', require('./routes/api/constants/stateRoute'));
+app.use('/constants/cities', require('./routes/api/constants/cityRoute'));
 
 
 // app.all('/*', (req, res) => {

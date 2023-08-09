@@ -7,10 +7,10 @@ const stateController = require('../../../controllers/fabricMasterController/con
 router.route('/')
     .get(stateController.getAllState)
     .post(stateController.createNewState)
-    // .put(companyController.updateCompany)
-    // .delete(companyController.deleteCompany)
+    .put(stateController.updateState)
+    .delete(stateController.deleteState)
 
-
-
+router.route('/:id')
+    .get(stateController.getState)
 
 module.exports = router;
