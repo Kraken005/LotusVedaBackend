@@ -389,3 +389,14 @@
 2023 08 09	01:35:59	51bf3395-11c8-43be-81e2-9cc1c9e31269	POST	undefined	/companies
 2023 08 09	01:36:07	b29777e7-0c37-4b28-9b59-15b0734a9acf	POST	undefined	/companies
 2023 08 09	01:36:43	f4379066-1e62-4137-9178-ee3efd9c36c5	POST	undefined	/companies
+2023 08 09	13:20:31	3542e9e9-4976-4190-84ce-e3c14232e0cf	POST	undefined	/constants/states
+2023 08 09	13:21:24	32ccf519-4132-4efa-9b4e-22d0342b74bc	POST	undefined	/constants/states
+2023 08 09	13:21:29	73c4ac13-76f3-4d6f-a3ba-6ff841489fa5	POST	undefined	/constants/states
+2023 08 09	13:22:01	37c41d53-8453-408c-8590-478fe0417934	POST	undefined	/constants/states
+2023 08 09	13:22:03	940432db-06b6-4a21-b60d-1d69e0c653e3	POST	undefined	/constants/states
+2023 08 09	13:22:34	63bc6c73-5732-4edd-8e62-191d61e75d9c	POST	undefined	/constants/states
+2023 08 09	13:22:51	bd70e7a0-5666-4df1-b113-bdbb2b5a6898	POST	undefined	/states
+2023 08 09	13:23:13	dd931e3a-c7fe-4829-a264-57120f553d43	POST	undefined	/states
+2023 08 09	13:23:25	ea838c12-152e-4f06-9642-35de49b3008c	GET	undefined	/states
+2023 08 09	13:27:35	8d829476-e940-4c68-ac1e-7b30bc239dea	GET	undefined	/constants/states
+2023 08 09	13:27:49	9811ec1b-0255-413e-bcc2-011ed3257cc5	GET	undefined	/states/constants

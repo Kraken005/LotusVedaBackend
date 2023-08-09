@@ -23,7 +23,7 @@ app.use(logger);
 // and fetch cookies credentials requirement
 app.use(credentials);
 //cross origin resource sharing
-app.use(cors(corsOptions));
+app.use(cors());
 
 // const server = http.createServer((req, res) => {
 //     console.log(req.url, req.method);
@@ -44,6 +44,7 @@ app.use('/employees', require('./routes/api/employees'));
 app.use('/customers', require('./routes/api/customers'));
 app.use('/companies', require('./routes/api/company'));
 app.use('/suppliers', require('./routes/api/suppliers'));
+app.use('/states', require('./routes/api/constants/stateRoute'));
 
 
 // app.all('/*', (req, res) => {
