@@ -37,6 +37,7 @@ const updateCity = async (req, res) => {
 
     const city = await City.findOne({_id: id}).exec();
     if(!city) res.status(204).json({"message": `No company matches ID ${id}`});
+    
     if(stateName) city.stateName = stateName
     if(cityCode) city.cityCode = cityCode
     if(cityName) city.cityName = cityName
