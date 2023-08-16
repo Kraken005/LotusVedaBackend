@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const taxSchema = new Schema({
-    tax: {
+    taxName: {
         type: String,
         required: true,
     },
