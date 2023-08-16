@@ -47,7 +47,10 @@ app.use('/suppliers', require('./routes/api/suppliers'));
 
 app.use('/constants/states', require('./routes/api/constants/stateRoute'));
 app.use('/constants/cities', require('./routes/api/constants/cityRoute'));
-
+app.use('/constants/sizes', require('./routes/api/constants/sizeRoute'));
+app.use('/constants/fabrics', require('./routes/api/constants/fabricRoute'));
+app.use('/constants/colors', require('./routes/api/constants/colorRoute'));
+app.use('/constants/categories', require('./routes/api/constants/categoryRoute'));
 
 // app.all('/*', (req, res) => {
 //     res.status(404).send('404 Anything Nothing is there')
