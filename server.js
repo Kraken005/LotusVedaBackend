@@ -54,6 +54,7 @@ app.use('/constants/categories', require('./routes/api/constants/categoryRoute')
 app.use('/constants/dealers', require('./routes/api/constants/dealerRoute'));
 app.use('/constants/hsn', require('./routes/api/constants/hsnRoute'));
 app.use('/constants/taxes', require('./routes/api/constants/taxRoute'));
+app.use('/constants/taxSlabs', require('./routes/api/constants/taxSlabRoute'));
 
 // app.all('/*', (req, res) => {
 //     res.status(404).send('404 Anything Nothing is there')

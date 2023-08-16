@@ -6,7 +6,7 @@ const taxSlabSchema = new Schema({
         type: String,
         required: true,
     },
-    tax: {
+    taxName: {
         type: String,
         required: true,
     },
