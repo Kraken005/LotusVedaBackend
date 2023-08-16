@@ -52,6 +52,7 @@ app.use('/constants/fabrics', require('./routes/api/constants/fabricRoute'));
 app.use('/constants/colors', require('./routes/api/constants/colorRoute'));
 app.use('/constants/categories', require('./routes/api/constants/categoryRoute'));
 app.use('/constants/dealers', require('./routes/api/constants/dealerRoute'));
+app.use('/constants/hsn', require('./routes/api/constants/hsnRoute'));
 
 // app.all('/*', (req, res) => {
 //     res.status(404).send('404 Anything Nothing is there')
