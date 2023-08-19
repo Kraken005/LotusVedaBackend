@@ -6,11 +6,7 @@ const hsnSchema = new Schema({
         type: String,
         required: true
     },
-    taxSlab: {
-        type: String,
-        required: true
-    },
-    slabCode: {
+    taxSlabName: {
         type: String,
         required: true
     }

@@ -10,6 +10,10 @@ const taxSlabSchema = new Schema({
         type: String,
         required: true,
     },
+    taxSlabName: {
+        type: String,
+        required: true,
+    },
     fromAmount: {
         type: String,
         required: true,

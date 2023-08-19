@@ -14,14 +14,14 @@ const getAllTaxSlab = async (req, res) => {
 }
 
 const createNewTaxSlab = async ( req, res) => {
-    const {slabCode, taxName, toAmount, fromAmount} = req.body;
-    if(!slabCode || !taxName || !toAmount || !fromAmount){
+    const {slabCode, taxName, taxSlabName, toAmount, fromAmount} = req.body;
+    if(!slabCode || !taxName || !taxSlabName || !toAmount || !fromAmount){
         res.status(400).json({"message": "Enter minimum data"});
     }
 
     try {
         const result = await TaxSlab.create({
-            slabCode, taxName, toAmount, fromAmount
+            slabCode, taxName, taxSlabName, toAmount, fromAmount
         });
         res.status(201).json(result);   
     } catch (error) {
@@ -30,7 +30,7 @@ const createNewTaxSlab = async ( req, res) => {
 }
 
 const updateTaxSlab = async (req, res) => {
-    const {id, slabCode, taxName, toAmount, fromAmount} = req.body;
+    const {id, slabCode, taxName, taxSlabName, toAmount, fromAmount} = req.body;
     if(!id){
         res.status(400).json({"message": "ID parameter required"});
     }
@@ -40,6 +40,7 @@ const updateTaxSlab = async (req, res) => {
     
     if(slabCode) taxSlab.slabCode = slabCode
     if(taxName) taxSlab.taxName = taxName
+    if(taxSlabName) taxSlab.taxSlabName = taxSlabName
     if(toAmount) taxSlab.toAmount = toAmount
     if(fromAmount) taxSlab.fromAmount = fromAmount
 
