@@ -14,14 +14,14 @@ const getAllHsn = async (req, res) => {
 }
 
 const createNewHsn = async ( req, res) => {
-    const {hsnCode, taxSlab} = req.body;
-    if(!hsnCode || !taxSlab){
+    const {hsnCode, taxSlab, slabCode} = req.body;
+    if(!hsnCode || !taxSlab || !slabCode){
         res.status(400).json({"message": "Enter minimum data"});
     }
 
     try {
         const result = await Hsn.create({
-            hsnCode, taxSlab
+            hsnCode, taxSlab, slabCode
         });
         res.status(201).json(result);   
     } catch (error) {
@@ -30,7 +30,7 @@ const createNewHsn = async ( req, res) => {
 }
 
 const updateHsn = async (req, res) => {
-    const {id, hsnCode, taxSlab} = req.body;
+    const {id, hsnCode, taxSlab, slabCode} = req.body;
     if(!id){
         res.status(400).json({"message": "ID parameter required"});
     }
@@ -40,6 +40,7 @@ const updateHsn = async (req, res) => {
     
     if(hsnCode) hsn.hsnCode = hsnCode
     if(taxSlab) hsn.taxSlab = taxSlab
+    if(slabCode) hsn.slabCode = slabCode
 
     const result = await hsn.save();
     res.json(result);

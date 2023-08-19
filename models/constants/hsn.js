@@ -9,6 +9,10 @@ const hsnSchema = new Schema({
     taxSlab: {
         type: String,
         required: true
+    },
+    slabCode: {
+        type: String,
+        required: true
     }
 },{
     timestamps: true,
