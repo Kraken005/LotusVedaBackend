@@ -14,14 +14,14 @@ const getAllCategory = async (req, res) => {
 }
 
 const createNewCategory = async ( req, res) => {
-    const {categoryName, categoryPrefix, remarks, HSN, barcodeType} = req.body;
-    if(!categoryName || !categoryPrefix || !HSN || !barcodeType){
+    const {categoryName, categoryPrefix, remarks, HSN, barcodeType, slabCode} = req.body;
+    if(!categoryName || !categoryPrefix || !HSN || !barcodeType || !slabCode){
         res.status(400).json({"message": "Enter minimum data"});
     }
 
     try {
         const result = await Category.create({
-            categoryName, categoryPrefix, remarks, HSN, barcodeType
+            categoryName, categoryPrefix, remarks, HSN, barcodeType, slabCode
         });
         res.status(201).json(result);   
     } catch (error) {
@@ -30,7 +30,7 @@ const createNewCategory = async ( req, res) => {
 }
 
 const updateCategory = async (req, res) => {
-    const {id, categoryName, categoryPrefix, remarks, HSN, barcodeType} = req.body;
+    const {id, categoryName, categoryPrefix, remarks, HSN, barcodeType, slabCode} = req.body;
     if(!id){
         res.status(400).json({"message": "ID parameter required"});
     }
@@ -43,6 +43,7 @@ const updateCategory = async (req, res) => {
     if(remarks) category.remarks = remarks
     if(HSN) category.HSN = HSN
     if(barcodeType) category.barcodeType = barcodeType
+    if(slabCode) category.slabCode = slabCode
 
     const result = await category.save();
     res.json(result);

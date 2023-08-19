@@ -21,6 +21,10 @@ const categorySchema = new Schema({
     barcodeType: {
         type: String,
         required: true,
+    },
+    slabCode: {
+        type: String,
+        required: true,
     }
 },{
     timestamps: true,
