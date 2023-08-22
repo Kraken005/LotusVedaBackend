@@ -2,22 +2,20 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const exchangeSchema = new Schema({
-    rupee: {
+    currencyName: {
         type: String,
-        required: false,
+        required: true
     },
-    usd: {
+    currencySymbol: {
         type: String,
-        required: false,
+        required: true
     },
-    euro: {
+    currencyValue: {
         type: String,
-        required: false,
-    },
-    pound: {
-        type: String,
-        required: false,
+        required: true,
+        default: "0.00"
     }
+
 },{
     timestamps: true,
 })
