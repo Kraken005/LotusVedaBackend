@@ -69,10 +69,22 @@ const getCategory = async (req, res) => {
 
     res.json(category);
 }
+
+const deleteAllCategory = async (req, res) => {
+    try {
+        const delCategories = await Category.deleteMany({});
+        return res.status(200).json({ message: "All the categories deleted succesfully"});
+
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: "An error occurred while deleting categories"});
+    }
+}
 module.exports = {
    getAllCategory,
    createNewCategory,
    updateCategory,
    deleteCategory,
-   getCategory
+   getCategory,
+   deleteAllCategory
 }
