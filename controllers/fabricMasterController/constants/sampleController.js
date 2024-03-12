@@ -50,6 +50,7 @@ const createNewSample = async (req, res) => {
         const result = await Sample.create({
             sampleNo, category, sampleCode, fabricQuality, fabricDescription, MRP, retailRate, purchaseRate, fabricCode, color, width, wholeSaleRate, rateCode, semiWholeSaleRate, HSN, remarks, picture, barcode
         });
+        await result.save();
         res.status(201).json(result);
     } catch (error) {
         console.error(error);
@@ -115,9 +116,16 @@ const getSample = async (req, res) => {
         ...sample.toObject(),
         picture: sample.picture ? sample.picture.toString('base64') : null,
       };
+    
+    // Set the appropriate content type based on the image's contentType
+    res.contentType(image.contentType);
+
+    // Send the image data as the response
+    res.send(image.data);
 
     res.json(sampleWithPicture);
 }
+
 module.exports = {
     getAllSample,
     createNewSample,

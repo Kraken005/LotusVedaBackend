@@ -60,7 +60,11 @@ app.use('/constants/hsn', require('./routes/api/constants/hsnRoute'));
 app.use('/constants/taxes', require('./routes/api/constants/taxRoute'));
 app.use('/constants/taxSlabs', require('./routes/api/constants/taxSlabRoute'));
 app.use('/constants/exchangeRate', require("./routes/api/constants/exchangeRateRoute"));
-//app.use('/constants/samples', require('./routes/api/constants/sampleRoute'));
+app.use('/constants/samples', require('./routes/api/constants/sampleRoute'));
+// app.post('/profile', upload.single('avatar'), function (req, res, next) {
+//     // req.file is the `avatar` file
+//     // req.body will hold the text fields, if there were any
+//   })
 app.use('/constants/techniques', require('./routes/api/constants/techniqueRoute'));
 app.use('/constants/units', require('./routes/api/constants/unitRoute'));
 
